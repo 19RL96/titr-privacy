@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · TITR</title>
+<meta name="description" content="Help with TITR, the iPhone caption app for Georgian and English videos: creating and fixing captions, exporting, plans, language and privacy.">
+<link rel="canonical" href="https://19rl96.github.io/titr-privacy/support/">
+<meta name="theme-color" content="#0F0F12">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Support · TITR">
+<meta property="og:description" content="Help with TITR, the iPhone caption app for Georgian and English videos: creating and fixing captions, exporting, plans, language and privacy.">
+<meta property="og:url" content="https://19rl96.github.io/titr-privacy/support/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F0F12'/%3E%3Crect x='6' y='19' width='20' height='5' rx='2.5' fill='%23FFD400'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;600;700&amp;display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0F0F12;
+  --panel: #17171C;
+  --line: #2A2A31;
+  --text: #ECECEF;
+  --muted: #A6A6B0;
+  --accent: #FFD400;
+  --latin: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Georgian", sans-serif;
+  --georgian: "Noto Sans Georgian", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1.0625rem/1.65 var(--latin);
+  overflow-wrap: break-word;
+}
+:lang(ka) { font-family: var(--georgian); line-height: 1.8; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+strong { font-weight: 600; color: #fff; }
+
+.top {
+  position: sticky; top: 0; z-index: 1;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.top-inner {
+  max-width: 65ch; margin: 0 auto; padding: 0.7rem 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.brand {
+  color: var(--text); text-decoration: none;
+  font: 800 1.2rem/1 var(--latin); letter-spacing: 0.06em;
+  display: inline-flex; flex-direction: column; gap: 5px;
+}
+.brand::after { content: ""; height: 4px; width: 100%; border-radius: 2px; background: var(--accent); }
+.lang { display: flex; gap: 0.25rem; }
+.lang a {
+  color: var(--text); text-decoration: none; font-size: 0.95rem;
+  padding: 0.45rem 0.7rem; border: 1px solid var(--line); border-radius: 999px;
+  min-height: 44px; display: inline-flex; align-items: center;
+}
+.lang a:hover { border-color: var(--accent); }
+
+main { max-width: 65ch; margin: 0 auto; padding: 0 16px 4rem; }
+article { padding-top: 2.5rem; }
+article + article { margin-top: 3.5rem; border-top: 1px solid var(--line); }
+article, section, h2, h3 { scroll-margin-top: 5rem; }
+
+h1 { font-size: clamp(1.9rem, 6vw, 2.5rem); line-height: 1.2; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
+/* Georgian words are long: keep „კონფიდენციალურობის“ on one line at 320px. */
+h1:lang(ka) { font-size: clamp(1.45rem, 6.6vw, 2.2rem); line-height: 1.4; letter-spacing: 0; }
+h2 { font-size: 1.3rem; line-height: 1.35; margin: 2.6rem 0 0.7rem; }
+h2:lang(ka) { line-height: 1.55; }
+h2 .num { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 0.35em; }
+h3 { font-size: 1.07rem; line-height: 1.45; margin: 1.8rem 0 0.4rem; }
+p { margin: 0 0 1rem; }
+.meta { color: var(--muted); margin-bottom: 1.6rem; }
+
+.lead {
+  background: var(--panel);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.15rem;
+  margin: 0 0 1.75rem;
+}
+
+.toc { margin: 0 0 1rem; }
+.toc-title { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.3rem; }
+.toc ol { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 2rem; }
+.toc li { margin: 0; padding: 0.15rem 0; break-inside: avoid; }
+.toc a { color: var(--text); text-decoration-color: var(--line); }
+.toc a:hover { text-decoration-color: var(--accent); }
+
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+ul ul { margin: 0.4rem 0 0; }
+li { margin: 0 0 0.45rem; }
+li::marker { color: var(--accent); }
+
+dl { margin: 0 0 1.25rem; border-top: 1px solid var(--line); }
+dl > div { padding: 0.65rem 0; border-bottom: 1px solid var(--line); }
+dt { font-weight: 600; color: #fff; }
+dd { margin: 0.15rem 0 0; }
+dl.labelled dt { font-weight: 400; color: var(--muted); font-size: 0.92rem; }
+dl.labelled > div { padding: 0.45rem 0; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.95rem; }
+.foot-inner { max-width: 65ch; margin: 0 auto; padding: 1.5rem 16px 2.5rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
+footer a { color: var(--text); }
+</style>
+</head>
+<body>
+<header class="top">
+<div class="top-inner">
+<a class="brand" href="../" aria-label="TITR">TITR</a>
+<nav class="lang" aria-label="Language / ენა">
+<a href="#en" hreflang="en" lang="en">English</a>
+<a href="#ka" hreflang="ka" lang="ka">ქართული</a>
+</nav>
+</div>
+</header>
+<main>
+<article id="en" lang="en" aria-labelledby="en-title">
+<h1 id="en-title">TITR support</h1>
+<p class="lead">TITR puts captions on your videos, word for word. It is made for Georgian first, and it works for English too.</p>
+<section id="en-s1" aria-labelledby="en-s1-h">
+<h2 id="en-s1-h">Contact</h2>
+<p>Email <strong><a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a></strong>. Please include your iPhone model, your iOS version and TITR’s version (at the bottom of TITR’s Settings).</p>
+<p>TITR is made by Rati Liklikadze, an individual developer in Georgia.</p>
+</section>
+<section id="en-s2" aria-labelledby="en-s2-h">
+<h2 id="en-s2-h">Creating captions</h2>
+<h3>How do I start?</h3>
+<p>Tap <strong>+</strong>, pick a video, choose the spoken language (Georgian or English) and tap <strong>Create captions</strong>. The first time, TITR asks before it sends the video’s sound.</p>
+<h3>Which languages does TITR understand?</h3>
+<p>Georgian and English speech. Pick the one spoken in the video before you tap Create captions; the wrong choice gives wrong words.</p>
+<h3>Do I need the internet?</h3>
+<p>Only to create captions. Editing and exporting work offline.</p>
+<h3>It says “This video is longer than your plan allows.”</h3>
+<p>Each plan has a longest video it can caption, and the Free plan’s is the shortest. The plans screen (Settings › See plans) shows each paid plan’s. Trim the video in Photos, or choose a plan with longer videos.</p>
+<h3>Creating captions failed.</h3>
+<p>Tap <strong>Try again</strong>. When creating captions fails, no minutes are used.</p>
+</section>
+<section id="en-s3" aria-labelledby="en-s3-h">
+<h2 id="en-s3-h">Fixing captions</h2>
+<h3>A word is wrong.</h3>
+<p>Tap it and type the right word. Words TITR is unsure about are marked; <strong>Review uncertain words</strong> takes you through them one by one.</p>
+<h3>The same word is wrong everywhere.</h3>
+<p>Use <strong>Find and replace</strong> to fix it in the whole video at once.</p>
+<h3>A caption shows too early or too late.</h3>
+<p>Select it on the caption track under the video and drag its edges.</p>
+<p><strong>Undo</strong> works for every change.</p>
+</section>
+<section id="en-s4" aria-labelledby="en-s4-h">
+<h2 id="en-s4-h">Exporting</h2>
+<h3>Which quality should I pick?</h3>
+<p><strong>Original quality</strong> keeps your video’s resolution and frame rate, and HDR stays HDR. <strong>Most compatible</strong> plays everywhere; HDR becomes standard range.</p>
+<h3>Save to Photos doesn’t work.</h3>
+<p>TITR needs permission to add to Photos. Allow it in the iPhone’s Settings › Apps › TITR › Photos, or use <strong>Share</strong> instead.</p>
+<h3>Does exporting use minutes?</h3>
+<p>No. Exports are always free and unlimited, with no watermark.</p>
+<p><strong>Long videos</strong> keep exporting if you leave TITR. Closing TITR from the app switcher stops the export.</p>
+</section>
+<section id="en-s5" aria-labelledby="en-s5-h">
+<h2 id="en-s5-h">Plans and purchases</h2>
+<h3>What do the plans include?</h3>
+<p>TITR’s Settings shows your plan’s minutes for the month and how many are left. <strong>See plans</strong> shows each paid plan’s minutes per month and longest video. The Free plan needs no purchase. Minutes count the length of the sound that is captioned. Every plan’s minutes renew each month, yearly plans included.</p>
+<h3>I bought a plan, but the minutes didn’t change.</h3>
+<p>Wait a moment, then tap <strong>Restore purchases</strong> in TITR’s Settings. If they still haven’t changed, email us with the order ID from Apple’s receipt email.</p>
+<h3>I have a new iPhone.</h3>
+<p>Sign in with the same Apple Account, open TITR’s Settings and tap <strong>Restore purchases</strong>.</p>
+<h3>How do I cancel?</h3>
+<p>In the iPhone’s Settings › [your name] › Subscriptions › TITR. Deleting the app does not cancel a subscription.</p>
+<h3>How do I get a refund?</h3>
+<p>Apple handles payments and refunds. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+</section>
+<section id="en-s6" aria-labelledby="en-s6-h">
+<h2 id="en-s6-h">Language</h2>
+<h3>How do I switch TITR to English (or back to Georgian)?</h3>
+<p>In TITR’s Settings, tap <strong>App language</strong>. It opens the iPhone’s Settings › Apps › TITR, where you choose the language. If that page has no <strong>Language</strong> row (iOS can hide it when the iPhone has only one language), add a second language in the iPhone’s Settings › General › Language &amp; Region; the row then appears. The spoken language for new videos is a separate setting in TITR’s Settings.</p>
+</section>
+<section id="en-s7" aria-labelledby="en-s7-h">
+<h2 id="en-s7-h">Privacy</h2>
+<p>Your videos, captions and edits stay on your iPhone. To create captions, TITR sends only the sound of the video, through TITR’s server, to ElevenLabs, an AI speech-recognition service. TITR’s server keeps no audio and no text.</p>
+<ul>
+<li><strong>Withdraw consent:</strong> TITR › Settings › Privacy › Withdraw consent to send audio. TITR asks again before it sends any audio.</li>
+<li><strong>Delete your data on TITR’s server:</strong> TITR › Settings › Privacy › Delete my data.</li>
+<li><strong>The full policy:</strong> <a href="../">https://19rl96.github.io/titr-privacy/</a></li>
+</ul>
+</section>
+</article>
+<article id="ka" lang="ka" aria-labelledby="ka-title">
+<h1 id="ka-title">TITR-ის მხარდაჭერა</h1>
+<p class="lead">TITR თქვენი ვიდეოების მეტყველებას ტიტრებად აქცევს, სიტყვასიტყვით. ის პირველ რიგში ქართულისთვის შეიქმნა, თუმცა ინგლისურთანაც მუშაობს.</p>
+<section id="ka-s1" aria-labelledby="ka-s1-h">
+<h2 id="ka-s1-h">კონტაქტი</h2>
+<p>მოგვწერეთ მისამართზე <strong><a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a></strong>. გთხოვთ, მიუთითოთ თქვენი iPhone-ის მოდელი, iOS-ის ვერსია და TITR-ის ვერსია (ის TITR-ის „პარამეტრების“ ბოლოშია).</p>
+<p>TITR-ის შემქმნელია რატი ლიკლიკაძე, დამოუკიდებელი დეველოპერი საქართველოდან.</p>
+</section>
+<section id="ka-s2" aria-labelledby="ka-s2-h">
+<h2 id="ka-s2-h">ტიტრების შექმნა</h2>
+<h3>როგორ დავიწყო?</h3>
+<p>დააჭირეთ <strong>+</strong>-ს, აირჩიეთ ვიდეო, მიუთითეთ მეტყველების ენა (ქართული ან ინგლისური) და დააჭირეთ ღილაკს <strong>„ტიტრების შექმნა“</strong>. პირველად TITR ვიდეოს ხმის გაგზავნამდე თანხმობას მოგთხოვთ.</p>
+<h3>რომელ ენებს ამოიცნობს TITR?</h3>
+<p>ქართულ და ინგლისურ მეტყველებას. ტიტრების შექმნამდე აირჩიეთ ის ენა, რომელზეც ვიდეოში საუბრობენ: სხვა ენის არჩევისას სიტყვები არასწორად ამოიცნობა.</p>
+<h3>ინტერნეტი საჭიროა?</h3>
+<p>მხოლოდ ტიტრების შესაქმნელად. რედაქტირება და ექსპორტი ინტერნეტის გარეშეც შეგიძლიათ.</p>
+<h3>წერია „ეს ვიდეო თქვენი გეგმის ლიმიტზე გრძელია“.</h3>
+<p>თითოეულ გეგმას ვიდეოს მაქსიმალური სიგრძე აქვს, ყველაზე მოკლე კი უფასო გეგმისაა. ფასიანი გეგმების ლიმიტები გეგმების ეკრანზე ჩანს („პარამეტრები“ › „გეგმების ნახვა“). შეამოკლეთ ვიდეო „ფოტოებში“ ან აირჩიეთ გეგმა, რომელიც უფრო გრძელ ვიდეოებს უშვებს.</p>
+<h3>ტიტრები ვერ შეიქმნა.</h3>
+<p>დააჭირეთ ღილაკს <strong>„ისევ სცადეთ“</strong>. თუ ტიტრების შექმნა ვერ მოხერხდა, წუთები არ იხარჯება.</p>
+</section>
+<section id="ka-s3" aria-labelledby="ka-s3-h">
+<h2 id="ka-s3-h">ტიტრების შესწორება</h2>
+<h3>სიტყვა არასწორია.</h3>
+<p>შეეხეთ მას და ჩაწერეთ სწორი სიტყვა. საეჭვო სიტყვები მონიშნულია და მათ სათითაოდ შეამოწმებთ ღილაკით <strong>„… საეჭვო სიტყვის შემოწმება“</strong>.</p>
+<h3>ერთი და იგივე სიტყვა ყველგან არასწორია.</h3>
+<p>გამოიყენეთ <strong>„ძიება და ჩანაცვლება“</strong>, რომ მთელ ვიდეოში ერთბაშად შეასწოროთ.</p>
+<h3>ტიტრი ძალიან ადრე ან გვიან ჩნდება.</h3>
+<p>ვიდეოს ქვემოთ, ტიტრების ზოლზე, აირჩიეთ ის და გადაათრიეთ მისი კიდეები.</p>
+<p>ნებისმიერი ცვლილების გაუქმება შეგიძლიათ ღილაკით <strong>„დაბრუნება“</strong>.</p>
+</section>
+<section id="ka-s4" aria-labelledby="ka-s4-h">
+<h2 id="ka-s4-h">ექსპორტი</h2>
+<h3>რომელი ხარისხი ავირჩიო?</h3>
+<p><strong>„ორიგინალური ხარისხი“</strong> ინარჩუნებს ვიდეოს გარჩევადობასა და კადრების სიხშირეს, HDR კი შენარჩუნდება. <strong>„უნივერსალური“</strong> ყველა მოწყობილობაზე იხსნება; HDR სტანდარტულ დიაპაზონად გარდაიქმნება.</p>
+<h3>„ფოტოებში“ შენახვა არ მუშაობს.</h3>
+<p>TITR-ს „ფოტოებში“ დამატების ნებართვა სჭირდება. მიეცით წვდომა iPhone-ის Settings › Apps › TITR › Photos-ში ან გამოიყენეთ <strong>„გაზიარება“</strong>.</p>
+<h3>ექსპორტი წუთებს ხარჯავს?</h3>
+<p>არა. ექსპორტი ყოველთვის უფასო და შეუზღუდავია, ჭვირნიშნის გარეშე.</p>
+<p><strong>გრძელი ვიდეოები:</strong> თუ TITR-იდან გახვალთ, გრძელი ვიდეოს ექსპორტი გაგრძელდება. აპების გადამრთველიდან დახურვა ექსპორტს შეაჩერებს.</p>
+</section>
+<section id="ka-s5" aria-labelledby="ka-s5-h">
+<h2 id="ka-s5-h">გეგმები და შესყიდვები</h2>
+<h3>რას მოიცავს გეგმები?</h3>
+<p>TITR-ის „პარამეტრებში“ ჩანს, რამდენი წუთი გაქვთ ამ თვეში და რამდენი დაგრჩათ. ღილაკი <strong>„გეგმების ნახვა“</strong> აჩვენებს თითოეული ფასიანი გეგმის თვიურ წუთებსა და ვიდეოს მაქსიმალურ სიგრძეს. უფასო გეგმა შესყიდვას არ საჭიროებს. წუთებში ითვლება ტიტრებად ქცეული ხმის ხანგრძლივობა. ყველა გეგმის წუთები ყოველ თვე ახლდება, წლიურ გეგმებშიც.</p>
+<h3>გეგმა ვიყიდე, მაგრამ წუთები არ შეიცვალა.</h3>
+<p>ცოტა ხანს დაელოდეთ, შემდეგ TITR-ის „პარამეტრებში“ დააჭირეთ ღილაკს <strong>„შესყიდვების აღდგენა“</strong>. თუ წუთები მაინც არ შეიცვალა, მოგვწერეთ და მიუთითეთ შეკვეთის ნომერი (order ID) Apple-ის ქვითრიდან.</p>
+<h3>ახალი iPhone მაქვს.</h3>
+<p>შედით იმავე Apple Account-ით, გახსენით TITR-ის „პარამეტრები“ და დააჭირეთ ღილაკს <strong>„შესყიდვების აღდგენა“</strong>.</p>
+<h3>როგორ გავაუქმო გამოწერა?</h3>
+<p>iPhone-ის Settings › [თქვენი სახელი] › Subscriptions › TITR. აპის წაშლა გამოწერას არ აუქმებს.</p>
+<h3>როგორ დავიბრუნო თანხა?</h3>
+<p>გადახდებსა და თანხის დაბრუნებას Apple მართავს. მოთხოვნა გაგზავნეთ საიტზე <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+</section>
+<section id="ka-s6" aria-labelledby="ka-s6-h">
+<h2 id="ka-s6-h">ენა</h2>
+<h3>როგორ გადავრთო TITR ინგლისურზე (ან ისევ ქართულზე)?</h3>
+<p>TITR-ის „პარამეტრებში“ დააჭირეთ ღილაკს <strong>„აპის ენა“</strong>. გაიხსნება iPhone-ის Settings › Apps › TITR, სადაც ენას აირჩევთ. თუ ამ გვერდზე <strong>Language</strong> არ ჩანს (iOS მას ზოგჯერ მალავს, როცა iPhone-ზე მხოლოდ ერთი ენაა), iPhone-ის Settings › General › Language &amp; Region-ში დაამატეთ კიდევ ერთი ენა. ამის შემდეგ ის გამოჩნდება. ახალი ვიდეოების მეტყველების ენა TITR-ის „პარამეტრებში“ ცალკე ირჩევა.</p>
+</section>
+<section id="ka-s7" aria-labelledby="ka-s7-h">
+<h2 id="ka-s7-h">კონფიდენციალურობა</h2>
+<p>თქვენი ვიდეოები, ტიტრები და ცვლილებები თქვენს iPhone-ზე რჩება. ტიტრების შესაქმნელად TITR ვიდეოს მხოლოდ ხმას TITR-ის სერვერის გავლით უგზავნის ElevenLabs-ს, ხელოვნურ ინტელექტზე დაფუძნებულ მეტყველების ამოცნობის სერვისს. TITR-ის სერვერი არც აუდიოს ინახავს და არც ტექსტს.</p>
+<ul>
+<li><strong>თანხმობის გაუქმება:</strong> TITR › „პარამეტრები“ › „კონფიდენციალურობა“ › „აუდიოს გაგზავნაზე თანხმობის გაუქმება“. აუდიოს გაგზავნამდე TITR თანხმობას ისევ მოგთხოვთ.</li>
+<li><strong>მონაცემების წაშლა TITR-ის სერვერიდან:</strong> TITR › „პარამეტრები“ › „კონფიდენციალურობა“ › „ჩემი მონაცემების წაშლა“.</li>
+<li><strong>სრული პოლიტიკა:</strong> <a href="../#ka">https://19rl96.github.io/titr-privacy/#ka</a></li>
+</ul>
+</section>
+</article>
+</main>
+<footer>
+<div class="foot-inner">
+<span>TITR · Rati Liklikadze</span>
+<a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>
+<a href="../">Privacy Policy</a> <a href="../#ka" lang="ka">კონფიდენციალურობის პოლიტიკა</a>
+</div>
+</footer>
+</body>
+</html>

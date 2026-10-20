@@ -1,0 +1,3 @@
+# TITR: privacy policy and support
+
+The privacy policy (<https://19rl96.github.io/titr-privacy/>) and the support page (<https://19rl96.github.io/titr-privacy/support/>) for **TITR**, the iPhone app that turns the speech in your videos into captions, each in English and Georgian. These are the URLs the app and its App Store listing link to. The pages are static HTML with no scripts, cookies or tracking, and their text mirrors the Markdown copies kept with the app's source (`docs/legal/privacy-policy.*.md`, `docs/appstore/support.*.md`), so any change goes into both. Questions: ratiliklikadze@gmail.com.
