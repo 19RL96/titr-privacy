@@ -127,8 +127,8 @@ footer a { color: var(--text); }
 <main>
 <article id="en" lang="en" aria-labelledby="en-title">
 <h1 id="en-title">Privacy Policy</h1>
-<p class="meta">Effective: 6 November 2026</p>
-<p class="lead"><strong>In short:</strong> your videos, captions and edits stay on your iPhone. To create captions, TITR sends only the sound of the video you choose, and the words in your “My words” list if you added any, through TITR’s server, to ElevenLabs, an AI speech-recognition service. It asks you first, and you can withdraw that consent in the app. TITR’s server keeps no audio, no words and no text, only the records listed in <a href="#en-3-2">section 3.2</a>. It deletes transcription and usage records after 13 months; <a href="#en-7">section 7</a> says how long each record is kept. There are no accounts, no ads and no tracking.</p>
+<p class="meta">Effective: 9 November 2026</p>
+<p class="lead"><strong>In short:</strong> your videos, captions and edits stay on your iPhone. To create captions, TITR sends only the sound of the video you choose, and the words in your “My words” list if you added any, through TITR’s server, to ElevenLabs, an AI speech-recognition service. It asks you first, and you can withdraw that consent in the app. If you use Translate (Creator plan), TITR sends the text of your captions and your “My words”, through TITR’s server and OpenRouter, to OpenAI, whose AI model translates it. It asks you first, separately from the sound. TITR’s server keeps no audio, no words and no text, only the records listed in <a href="#en-3-2">section 3.2</a>. It deletes transcription and usage records after 13 months; <a href="#en-7">section 7</a> says how long each record is kept. There are no accounts, no ads and no tracking.</p>
 <nav class="toc" aria-labelledby="en-toc">
 <p class="toc-title" id="en-toc">Contents</p>
 <ol><li><a href="#en-1">1. Who we are</a></li><li><a href="#en-2">2. What stays on your iPhone</a></li><li><a href="#en-3">3. What leaves your iPhone, and why</a></li><li><a href="#en-4">4. What TITR does not do</a></li><li><a href="#en-5">5. Why we use the data (legal bases)</a></li><li><a href="#en-6">6. Who processes data for us</a></li><li><a href="#en-7">7. How long data is kept</a></li><li><a href="#en-8">8. Your choices and rights</a></li><li><a href="#en-9">9. Children</a></li><li><a href="#en-10">10. Security</a></li><li><a href="#en-11">11. Changes to this policy</a></li><li><a href="#en-12">12. Contact</a></li></ol>
@@ -164,12 +164,23 @@ footer a { color: var(--text); }
 <div><dt>At ElevenLabs</dt><dd>ElevenLabs processes the audio and your words to produce the transcript, under ElevenLabs’ terms and its privacy policy (<a href="https://elevenlabs.io/privacy-policy">https://elevenlabs.io/privacy-policy</a>). TITR stores neither</dd></div>
 </dl>
 <p>If you don’t agree, nothing is sent, but TITR cannot create captions.</p>
+<h3 id="en-3-1a">3.1a The text of your captions, to translate them</h3>
+<p>Only when you choose a language in <strong>Translate</strong> (Creator plan), TITR sends the text of that video’s captions, in its original language, and your “My words” list if you added any, through TITR’s server and <strong>OpenRouter</strong> to <strong>OpenAI</strong>. OpenAI’s AI model returns the translation, and TITR shows it as captions you can switch to. The video and its sound aren’t sent for this.</p>
+<dl>
+<div><dt>What is sent</dt><dd>The captions’ text, split into segments, the two language codes and, if you added any, the words in your “My words” list. Never the picture or the sound</dd></div>
+<div><dt>When</dt><dd>Only after you agree on the “Before your first translation” screen, and each time you translate or try again</dd></div>
+<div><dt>Who receives it</dt><dd>TITR’s server (Cloudflare) passes it to OpenRouter, which passes it to OpenAI and to no other host: TITR asks OpenRouter for OpenAI’s own service only, and only where the data isn’t kept for the provider’s own use. Both receive it from TITR’s own account, with no identifier of you or your iPhone</dd></div>
+<div><dt>Kept by TITR?</dt><dd><strong>No.</strong> TITR’s server holds the text only while the request runs, and it stores neither it nor the translation. A record of the translation keeps a fingerprint of the text (<a href="#en-3-2">section 3.2</a>)</dd></div>
+<div><dt>At OpenRouter and OpenAI</dt><dd>OpenRouter passes the text on and doesn’t store it (<a href="https://openrouter.ai/docs/guides/privacy/data-collection">https://openrouter.ai/docs/guides/privacy/data-collection</a>). OpenAI processes it to produce the translation, doesn’t use it to train its models, and may keep it for up to 30 days to detect abuse (<a href="https://developers.openai.com/api/docs/guides/your-data">https://developers.openai.com/api/docs/guides/your-data</a>)</dd></div>
+</dl>
+<p>If you don’t agree, nothing is sent, but TITR cannot translate. Translations you’ve made stay on your iPhone, in the project, even if you later withdraw your consent or your plan ends.</p>
 <h3 id="en-3-2">3.2 Records on TITR’s server</h3>
 <p>To run your plan’s minutes fairly and to stop abuse, TITR’s server keeps:</p>
 <ul>
 <li><strong>For each install:</strong> a random install identifier, a fingerprint (SHA-256) of its session token (never the token itself), the random app user identifier TITR created on your iPhone, and when the install started.</li>
 <li><strong>For each transcription:</strong> a random job identifier, its status, the seconds reserved and charged, how often it was retried, the provider and model used, what it cost TITR, the outcome code, how long it took, and the times. Also a fingerprint (SHA-256) of the sound that was sent, which cannot be turned back into sound, and when minutes were used for it: sending the same sound again within a day uses no minutes.</li>
-<li><strong>Counters:</strong> seconds used per month, and what each install cost TITR per day (used to cap spending).</li>
+<li><strong>For each translation:</strong> a random job identifier, the target language, a fingerprint (SHA-256) of the text that was sent, which cannot be turned back into text, its length in seconds of speech, how often it was tried, whether it was charged, and the time. Trying the same translation again uses no minutes.</li>
+<li><strong>Counters:</strong> seconds used per month, for captions and for translation, and what each install cost TITR per day (used to cap spending).</li>
 <li><strong>If you subscribe:</strong> what RevenueCat reports about the subscription: the product, the plan, the current period’s start and end, whether it is active, will renew or has a billing issue, the store, whether it was a test (sandbox) purchase, the App Store’s original transaction identifier, and the identifier and time of the last update.</li>
 <li><strong>Subscription updates received:</strong> the update’s identifier, type and time.</li>
 </ul>
@@ -198,6 +209,7 @@ footer a { color: var(--text); }
 <h2 id="en-5-h"><span class="num">5.</span>Why we use the data (legal bases)</h2>
 <dl>
 <div><dt>Sending the sound of a video, and your “My words”, to ElevenLabs to create captions</dt><dd>Your consent, asked in the app before the first upload. You can withdraw it (<a href="#en-8">section 8</a>)</dd></div>
+<div><dt>Sending the text of your captions, and your “My words”, through OpenRouter to OpenAI to translate them</dt><dd>Your consent, asked in the app before the first translation, separately from the sound. You can withdraw it (<a href="#en-8">section 8</a>)</dd></div>
 <div><dt>Counting minutes, enforcing the plan, applying a subscription</dt><dd>To provide the service you asked for</dd></div>
 <div><dt>DeviceCheck, daily spending caps, server logs</dt><dd>Our legitimate interest in preventing abuse and keeping the service running</dd></div>
 <div><dt>Subscription statistics from RevenueCat (purchases, renewals, cancellations)</dt><dd>Our legitimate interest in seeing how TITR’s plans sell</dd></div>
@@ -211,10 +223,22 @@ footer a { color: var(--text); }
 <div><dt>What they receive</dt><dd>The audio of the video you transcribe, and your “My words” list</dd></div>
 <div><dt>Where</dt><dd>As set out in ElevenLabs’ privacy policy</dd></div>
 </dl>
+<h3>OpenRouter</h3>
+<dl class="labelled">
+<div><dt>What for</dt><dd>Passing text to be translated on to OpenAI</dd></div>
+<div><dt>What they receive</dt><dd>The text of the captions you translate, and your “My words” list</dd></div>
+<div><dt>Where</dt><dd>As set out in OpenRouter’s privacy policy</dd></div>
+</dl>
+<h3>OpenAI</h3>
+<dl class="labelled">
+<div><dt>What for</dt><dd>Translation</dd></div>
+<div><dt>What they receive</dt><dd>The text of the captions you translate, and your “My words” list</dd></div>
+<div><dt>Where</dt><dd>As set out in OpenAI’s privacy policy</dd></div>
+</dl>
 <h3>Cloudflare</h3>
 <dl class="labelled">
 <div><dt>What for</dt><dd>Hosting TITR’s server and database</dd></div>
-<div><dt>What they receive</dt><dd>Audio and words in transit, the records in <a href="#en-3-2">section 3.2</a>, IP addresses, logs</dd></div>
+<div><dt>What they receive</dt><dd>Audio, caption text and words in transit, the records in <a href="#en-3-2">section 3.2</a>, IP addresses, logs</dd></div>
 <div><dt>Where</dt><dd>Cloudflare’s global network</dd></div>
 </dl>
 <h3>RevenueCat</h3>
@@ -236,8 +260,9 @@ footer a { color: var(--text); }
 <dl>
 <div><dt>Videos, captions, edits</dt><dd>On your iPhone until you delete them</dd></div>
 <div><dt>Audio and words sent for captions</dt><dd>Not stored by TITR. ElevenLabs: see <a href="#en-3-1">section 3.1</a></dd></div>
+<div><dt>Caption text and words sent for translation</dt><dd>Not stored by TITR. OpenRouter doesn’t store it; OpenAI may keep it up to 30 days: see <a href="#en-3-1a">section 3.1a</a></dd></div>
 <div><dt>Your “My words” list</dt><dd>On your iPhone until you delete the words or the app</dd></div>
-<div><dt>Transcription records, usage records, counters, subscription updates received</dt><dd>Deleted automatically 13 months after they were written or last updated (a daily job)</dd></div>
+<div><dt>Transcription and translation records, usage records, counters, subscription updates received</dt><dd>Deleted automatically 13 months after they were written or last updated (a daily job)</dd></div>
 <div><dt>The install record (install identifier, token fingerprint, app user identifier)</dt><dd>Until you use <strong>Delete my data</strong>. It is not deleted automatically</dd></div>
 <div><dt>The subscription status from RevenueCat</dt><dd>Until you ask us to delete it (<a href="#en-8">section 8</a>). It is not deleted automatically, not even after the subscription ends</dd></div>
 <div><dt>Server logs</dt><dd>Up to 7 days, at Cloudflare</dd></div>
@@ -249,8 +274,9 @@ footer a { color: var(--text); }
 <h2 id="en-8-h"><span class="num">8.</span>Your choices and rights</h2>
 <ul>
 <li><strong>Withdraw consent to send audio:</strong> in TITR, <strong>Settings › Privacy › Withdraw consent to send audio</strong>. Nothing more is sent until you agree again, and TITR asks before the next upload. Audio already processed is not affected.</li>
+<li><strong>Withdraw consent to send captions for translation:</strong> in TITR, <strong>Settings › Privacy › Withdraw consent to send captions for translation</strong>. Nothing more is sent until you agree again. Translations you’ve made stay on your iPhone.</li>
 <li><strong>My words:</strong> add or delete them in TITR, in <strong>Settings › Language › My words</strong> or on the caption setup screen. They are kept only on your iPhone; TITR’s server never stores them.</li>
-<li><strong>Delete my data:</strong> in TITR, <strong>Settings › Privacy › Delete my data</strong> deletes the install record, its transcription and usage records, its free-minute counter and its spending counter from TITR’s server at once. It does not delete:
+<li><strong>Delete my data:</strong> in TITR, <strong>Settings › Privacy › Delete my data</strong> deletes the install record, its transcription, translation and usage records, its free-minute counter and its spending counter from TITR’s server at once. It does not delete:
 <ul><li>the subscription status and the minutes a subscription has used, so that deleting cannot refill a paid month. The minutes used are deleted 13 months after their last update; the subscription status stays until you ask us to delete it;</li><li>the free minutes this iPhone already used this month (DeviceCheck);</li><li>anything on your iPhone. Your projects stay until you delete them.</li></ul>
 </li>
 <li><strong>Access, correction, deletion, objection, a copy of your data:</strong> write to <a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>. TITR has no accounts, so to find a subscription’s records we may ask for the order ID from Apple’s purchase receipt email.</li>
@@ -259,15 +285,15 @@ footer a { color: var(--text); }
 </section>
 <section id="en-9" aria-labelledby="en-9-h">
 <h2 id="en-9-h"><span class="num">9.</span>Children</h2>
-<p>TITR is not made for children and does not knowingly collect data from them. If you are under 16, ask a parent or guardian before you agree to send audio. If you think a child has used TITR without a parent’s or guardian’s agreement, you can delete the records on TITR’s server at once in TITR, <strong>Settings › Privacy › Delete my data</strong>. You can also write to <a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>.</p>
+<p>TITR is not made for children and does not knowingly collect data from them. If you are under 16, ask a parent or guardian before you agree to send audio or caption text. If you think a child has used TITR without a parent’s or guardian’s agreement, you can delete the records on TITR’s server at once in TITR, <strong>Settings › Privacy › Delete my data</strong>. You can also write to <a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>.</p>
 </section>
 <section id="en-10" aria-labelledby="en-10-h">
 <h2 id="en-10-h"><span class="num">10.</span>Security</h2>
-<p>All traffic between the app and TITR’s server is encrypted (HTTPS). The server stores session tokens only as fingerprints, and the keys for ElevenLabs and the other services stay on the server, never in the app. On your iPhone, the token and the app user identifier are kept in the Keychain.</p>
+<p>All traffic between the app and TITR’s server is encrypted (HTTPS). The server stores session tokens only as fingerprints, and the keys for ElevenLabs, OpenRouter and the other services stay on the server, never in the app. On your iPhone, the token and the app user identifier are kept in the Keychain.</p>
 </section>
 <section id="en-11" aria-labelledby="en-11-h">
 <h2 id="en-11-h"><span class="num">11.</span>Changes to this policy</h2>
-<p>When the data flows change, we update this page and its date. If a change affects what leaves your iPhone, TITR tells you in the app and asks for your consent again before it sends any audio.</p>
+<p>When the data flows change, we update this page and its date. If a change affects what leaves your iPhone, TITR tells you in the app and asks for your consent again before it sends any audio or text.</p>
 </section>
 <section id="en-12" aria-labelledby="en-12-h">
 <h2 id="en-12-h"><span class="num">12.</span>Contact</h2>
@@ -276,8 +302,8 @@ footer a { color: var(--text); }
 </article>
 <article id="ka" lang="ka" aria-labelledby="ka-title">
 <h1 id="ka-title">კონფიდენციალურობის პოლიტიკა</h1>
-<p class="meta">ძალაში შესვლის თარიღი: 2026 წლის 6 ნოემბერი</p>
-<p class="lead"><strong>მოკლედ:</strong> თქვენი ვიდეოები, ტიტრები და ცვლილებები თქვენს iPhone-ზე რჩება. ტიტრების შესაქმნელად TITR თქვენ მიერ არჩეული ვიდეოს მხოლოდ ხმასა და „ჩემი სიტყვების“ სიას (თუ ის შეავსეთ) TITR-ის სერვერის გავლით უგზავნის ElevenLabs-ს, ხელოვნურ ინტელექტზე დაფუძნებულ მეტყველების ამოცნობის სერვისს. ამისთვის TITR წინასწარ ითხოვს თქვენს თანხმობას, რომლის გაუქმებაც აპში ნებისმიერ დროს შეგიძლიათ. TITR-ის სერვერი არც ხმას ინახავს, არც სიტყვებს და არც ტექსტს, მხოლოდ <a href="#ka-3-2">3.2 ნაწილში</a> ჩამოთვლილ ჩანაწერებს. ტრანსკრიფციისა და გამოყენების ჩანაწერებს ის 13 თვის შემდეგ შლის; თითოეული ჩანაწერის შენახვის ვადა <a href="#ka-7">მე-7 ნაწილშია</a> მითითებული. TITR-ში არც ანგარიშია, არც რეკლამა და არც თვალთვალი.</p>
+<p class="meta">ძალაში შესვლის თარიღი: 2026 წლის 9 ნოემბერი</p>
+<p class="lead"><strong>მოკლედ:</strong> თქვენი ვიდეოები, ტიტრები და ცვლილებები თქვენს iPhone-ზე რჩება. ტიტრების შესაქმნელად TITR თქვენ მიერ არჩეული ვიდეოს მხოლოდ ხმასა და „ჩემი სიტყვების“ სიას (თუ ის შეავსეთ) TITR-ის სერვერის გავლით უგზავნის ElevenLabs-ს, ხელოვნურ ინტელექტზე დაფუძნებულ მეტყველების ამოცნობის სერვისს. ამისთვის TITR წინასწარ ითხოვს თქვენს თანხმობას, რომლის გაუქმებაც აპში ნებისმიერ დროს შეგიძლიათ. თუ „თარგმნას“ იყენებთ (Creator გეგმა), TITR ტიტრების ტექსტსა და „ჩემი სიტყვების“ სიას TITR-ის სერვერისა და OpenRouter-ის გავლით უგზავნის OpenAI-ს, რომლის ხელოვნური ინტელექტის მოდელიც მას თარგმნის. ამაზეც TITR წინასწარ გეკითხებათ, ხმისგან ცალკე. TITR-ის სერვერი არც ხმას ინახავს, არც სიტყვებს და არც ტექსტს, მხოლოდ <a href="#ka-3-2">3.2 ნაწილში</a> ჩამოთვლილ ჩანაწერებს. ტრანსკრიფციისა და გამოყენების ჩანაწერებს ის 13 თვის შემდეგ შლის; თითოეული ჩანაწერის შენახვის ვადა <a href="#ka-7">მე-7 ნაწილშია</a> მითითებული. TITR-ში არც ანგარიშია, არც რეკლამა და არც თვალთვალი.</p>
 <nav class="toc" aria-labelledby="ka-toc">
 <p class="toc-title" id="ka-toc">სარჩევი</p>
 <ol><li><a href="#ka-1">1. ვინ ვართ ჩვენ</a></li><li><a href="#ka-2">2. რა რჩება თქვენს iPhone-ზე</a></li><li><a href="#ka-3">3. რა გადის თქვენი iPhone-იდან და რატომ</a></li><li><a href="#ka-4">4. რას არ აკეთებს TITR</a></li><li><a href="#ka-5">5. რისთვის ვიყენებთ მონაცემებს (სამართლებრივი საფუძველი)</a></li><li><a href="#ka-6">6. ვინ ამუშავებს მონაცემებს ჩვენი დავალებით</a></li><li><a href="#ka-7">7. რამდენ ხანს ინახება მონაცემები</a></li><li><a href="#ka-8">8. თქვენი არჩევანი და უფლებები</a></li><li><a href="#ka-9">9. ბავშვები</a></li><li><a href="#ka-10">10. უსაფრთხოება</a></li><li><a href="#ka-11">11. ცვლილებები ამ პოლიტიკაში</a></li><li><a href="#ka-12">12. კონტაქტი</a></li></ol>
@@ -313,12 +339,23 @@ footer a { color: var(--text); }
 <div><dt>ElevenLabs-ში</dt><dd>ElevenLabs აუდიოსა და თქვენს სიტყვებს ამუშავებს და ხმას ტექსტად აქცევს საკუთარი პირობებისა და კონფიდენციალურობის პოლიტიკის (<a href="https://elevenlabs.io/privacy-policy">https://elevenlabs.io/privacy-policy</a>) შესაბამისად. TITR მათ არ ინახავს</dd></div>
 </dl>
 <p>თუ არ დაეთანხმებით, არაფერი გაიგზავნება, მაგრამ TITR ტიტრებს ვერ შექმნის.</p>
+<h3 id="ka-3-1a">3.1ა ტიტრების ტექსტი, სათარგმნად</h3>
+<p>მხოლოდ მაშინ, როცა <strong>„თარგმნაში“</strong> (Creator გეგმა) ენას აირჩევთ, TITR იმ ვიდეოს ტიტრების ტექსტს ორიგინალის ენაზე და „ჩემი სიტყვების“ სიას (თუ სიტყვები დაამატეთ) TITR-ის სერვერისა და <strong>OpenRouter-ის</strong> გავლით უგზავნის <strong>OpenAI-ს</strong>. OpenAI-ის ხელოვნური ინტელექტის მოდელი თარგმანს აბრუნებს, TITR კი მას ტიტრების სახით აჩვენებს: ენებს შორის გადართვა ნებისმიერ დროს შეგიძლიათ. ვიდეო და მისი ხმა ამისთვის არ იგზავნება.</p>
+<dl>
+<div><dt>რა იგზავნება</dt><dd>ტიტრების ტექსტი, სეგმენტებად დაყოფილი, ორი ენის კოდი და „ჩემი სიტყვების“ სია, თუ სიტყვები დაამატეთ. გამოსახულება და ხმა არასდროს</dd></div>
+<div><dt>როდის</dt><dd>მხოლოდ მას შემდეგ, რაც ეკრანზე „პირველ თარგმანამდე“ დაეთანხმებით, და ყოველ ჯერზე, როცა თარგმნით ან ისევ ცდილობთ</dd></div>
+<div><dt>ვინ იღებს</dt><dd>TITR-ის სერვერი (Cloudflare) ტექსტს OpenRouter-ს გადასცემს, OpenRouter კი მხოლოდ OpenAI-ს: TITR OpenRouter-ს მხოლოდ OpenAI-ის საკუთარ სერვისს სთხოვს და მხოლოდ ისეთს, რომელიც მონაცემებს საკუთარი მიზნებისთვის არ ინახავს. ორივე მას TITR-ის საკუთარი ანგარიშიდან იღებს, თქვენი ან თქვენი iPhone-ის იდენტიფიკატორის გარეშე</dd></div>
+<div><dt>ინახავს თუ არა TITR?</dt><dd><strong>არა.</strong> TITR-ის სერვერს ტექსტი მხოლოდ მოთხოვნის დამუშავების დროს აქვს და არც მას ინახავს, არც თარგმანს. თარგმნის ჩანაწერში მხოლოდ ტექსტის ანაბეჭდი რჩება (იხ. <a href="#ka-3-2">3.2 ნაწილი</a>)</dd></div>
+<div><dt>OpenRouter-სა და OpenAI-ში</dt><dd>OpenRouter ტექსტს გადასცემს და არ ინახავს (<a href="https://openrouter.ai/docs/guides/privacy/data-collection">https://openrouter.ai/docs/guides/privacy/data-collection</a>). OpenAI მას თარგმანის შესაქმნელად ამუშავებს, თავისი მოდელების გასაწვრთნელად არ იყენებს და ბოროტად გამოყენების გამოსავლენად შეიძლება 30 დღემდე შეინახოს (<a href="https://developers.openai.com/api/docs/guides/your-data">https://developers.openai.com/api/docs/guides/your-data</a>)</dd></div>
+</dl>
+<p>თუ არ დაეთანხმებით, არაფერი გაიგზავნება, მაგრამ TITR ვერ თარგმნის. უკვე შექმნილი თარგმანები პროექტში, თქვენს iPhone-ზე რჩება, მაშინაც კი, თუ თანხმობას მოგვიანებით გააუქმებთ ან გეგმა დასრულდება.</p>
 <h3 id="ka-3-2">3.2 ჩანაწერები TITR-ის სერვერზე</h3>
 <p>თქვენი გეგმის წუთების სამართლიანი აღრიცხვისთვის და ბოროტად გამოყენების თავიდან ასაცილებლად TITR-ის სერვერზე ინახება:</p>
 <ul>
 <li><strong>თითოეულ ინსტალაციაზე:</strong> ინსტალაციის შემთხვევითი იდენტიფიკატორი, სესიის ტოკენის ანაბეჭდი (SHA-256; თავად ტოკენი არასდროს), მომხმარებლის შემთხვევითი იდენტიფიკატორი, რომელიც TITR-მა თქვენს iPhone-ზე შექმნა, და ინსტალაციის დაწყების დრო.</li>
 <li><strong>თითოეულ ტრანსკრიფციაზე:</strong> სამუშაოს შემთხვევითი იდენტიფიკატორი, სტატუსი, დაჯავშნილი და დახარჯული წამები, განმეორებების რაოდენობა, გამოყენებული პროვაიდერი და მოდელი, TITR-ისთვის მისი ღირებულება, შედეგის კოდი, დამუშავების ხანგრძლივობა და დროები. ასევე გაგზავნილი ხმის ანაბეჭდი (SHA-256), რომლისგანაც ხმის აღდგენა შეუძლებელია, და დრო, როცა ამ ხმაზე წუთები დაიხარჯა: იმავე ხმის ხელახლა გაგზავნა ერთი დღის განმავლობაში წუთებს აღარ ხარჯავს.</li>
-<li><strong>მრიცხველები:</strong> თვეში გამოყენებული წამები და თითოეული ინსტალაციის დღიური ღირებულება TITR-ისთვის (ხარჯის ზღვრის დასაცავად).</li>
+<li><strong>თითოეულ თარგმანზე:</strong> სამუშაოს შემთხვევითი იდენტიფიკატორი, სამიზნე ენა, გაგზავნილი ტექსტის ანაბეჭდი (SHA-256), რომლისგანაც ტექსტის აღდგენა შეუძლებელია, მისი ხანგრძლივობა მეტყველების წამებში, ცდების რაოდენობა, დაიხარჯა თუ არა მასზე წუთები, და დრო. იმავე თარგმანის ხელახლა ცდა წუთებს აღარ ხარჯავს.</li>
+<li><strong>მრიცხველები:</strong> თვეში გამოყენებული წამები, ტიტრებისა და თარგმნისთვის ცალ-ცალკე, და თითოეული ინსტალაციის დღიური ღირებულება TITR-ისთვის (ხარჯის ზღვრის დასაცავად).</li>
 <li><strong>თუ გამოიწერთ:</strong> მონაცემები, რომლებსაც RevenueCat გამოწერის შესახებ გვაწვდის: პროდუქტი, გეგმა, მიმდინარე პერიოდის დასაწყისი და დასასრული, აქტიურია თუ არა, განახლდება თუ არა, აქვს თუ არა გადახდის პრობლემა, მაღაზია, იყო თუ არა სატესტო (sandbox) შესყიდვა, App Store-ის თავდაპირველი ტრანზაქციის იდენტიფიკატორი, ბოლო შეტყობინების იდენტიფიკატორი და დრო.</li>
 <li><strong>გამოწერის შესახებ მიღებული შეტყობინებები:</strong> შეტყობინების იდენტიფიკატორი, ტიპი და დრო.</li>
 </ul>
@@ -347,6 +384,7 @@ footer a { color: var(--text); }
 <h2 id="ka-5-h"><span class="num">5.</span>რისთვის ვიყენებთ მონაცემებს (სამართლებრივი საფუძველი)</h2>
 <dl>
 <div><dt>ვიდეოს ხმისა და „ჩემი სიტყვების“ გაგზავნა ElevenLabs-ისთვის ტიტრების შესაქმნელად</dt><dd>თქვენი თანხმობა, რომელსაც აპი პირველ ატვირთვამდე ითხოვს. მისი გაუქმება შეგიძლიათ (იხ. <a href="#ka-8">მე-8 ნაწილი</a>)</dd></div>
+<div><dt>ტიტრების ტექსტისა და „ჩემი სიტყვების“ გაგზავნა OpenRouter-ის გავლით OpenAI-სთვის სათარგმნად</dt><dd>თქვენი თანხმობა, რომელსაც აპი პირველ თარგმანამდე, ხმისგან ცალკე ითხოვს. მისი გაუქმება შეგიძლიათ (იხ. <a href="#ka-8">მე-8 ნაწილი</a>)</dd></div>
 <div><dt>წუთების აღრიცხვა, გეგმის ლიმიტების დაცვა, გამოწერის ასახვა</dt><dd>თქვენ მიერ მოთხოვნილი მომსახურების გაწევა</dd></div>
 <div><dt>DeviceCheck, დღიური ხარჯის ზღვრები, სერვერის ჟურნალები</dt><dd>ჩვენი კანონიერი ინტერესი: ბოროტად გამოყენების თავიდან აცილება და მომსახურების გამართული მუშაობა</dd></div>
 <div><dt>RevenueCat-ის გამოწერების სტატისტიკა (შესყიდვები, განახლებები, გაუქმებები)</dt><dd>ჩვენი კანონიერი ინტერესი: იმის გაგება, თუ როგორ იყიდება TITR-ის გეგმები</dd></div>
@@ -360,10 +398,22 @@ footer a { color: var(--text); }
 <div><dt>რას იღებს</dt><dd>ტრანსკრიფციისთვის გაგზავნილი ვიდეოს აუდიო და „ჩემი სიტყვების“ სია</dd></div>
 <div><dt>სად</dt><dd>ElevenLabs-ის კონფიდენციალურობის პოლიტიკის მიხედვით</dd></div>
 </dl>
+<h3>OpenRouter</h3>
+<dl class="labelled">
+<div><dt>რისთვის</dt><dd>სათარგმნი ტექსტის OpenAI-სთვის გადაცემა</dd></div>
+<div><dt>რას იღებს</dt><dd>თქვენ მიერ სათარგმნი ტიტრების ტექსტი და „ჩემი სიტყვების“ სია</dd></div>
+<div><dt>სად</dt><dd>OpenRouter-ის კონფიდენციალურობის პოლიტიკის მიხედვით</dd></div>
+</dl>
+<h3>OpenAI</h3>
+<dl class="labelled">
+<div><dt>რისთვის</dt><dd>თარგმნა</dd></div>
+<div><dt>რას იღებს</dt><dd>თქვენ მიერ სათარგმნი ტიტრების ტექსტი და „ჩემი სიტყვების“ სია</dd></div>
+<div><dt>სად</dt><dd>OpenAI-ის კონფიდენციალურობის პოლიტიკის მიხედვით</dd></div>
+</dl>
 <h3>Cloudflare</h3>
 <dl class="labelled">
 <div><dt>რისთვის</dt><dd>TITR-ის სერვერისა და მონაცემთა ბაზის ჰოსტინგი</dd></div>
-<div><dt>რას იღებს</dt><dd>გადაცემული აუდიო და სიტყვები, <a href="#ka-3-2">3.2 ნაწილის</a> ჩანაწერები, IP მისამართები, ჟურნალები</dd></div>
+<div><dt>რას იღებს</dt><dd>გადაცემული აუდიო, ტიტრების ტექსტი და სიტყვები, <a href="#ka-3-2">3.2 ნაწილის</a> ჩანაწერები, IP მისამართები, ჟურნალები</dd></div>
 <div><dt>სად</dt><dd>Cloudflare-ის გლობალური ქსელი</dd></div>
 </dl>
 <h3>RevenueCat</h3>
@@ -385,8 +435,9 @@ footer a { color: var(--text); }
 <dl>
 <div><dt>ვიდეოები, ტიტრები, ცვლილებები</dt><dd>თქვენს iPhone-ზე, სანამ არ წაშლით</dd></div>
 <div><dt>ტიტრებისთვის გაგზავნილი აუდიო და სიტყვები</dt><dd>TITR არ ინახავს. ElevenLabs: იხ. <a href="#ka-3-1">3.1 ნაწილი</a></dd></div>
+<div><dt>სათარგმნად გაგზავნილი ტიტრების ტექსტი და სიტყვები</dt><dd>TITR არ ინახავს. OpenRouter არ ინახავს; OpenAI შეიძლება 30 დღემდე შეინახოს: იხ. <a href="#ka-3-1a">3.1ა ნაწილი</a></dd></div>
 <div><dt>„ჩემი სიტყვების“ სია</dt><dd>თქვენს iPhone-ზე, სანამ სიტყვებს ან აპს არ წაშლით</dd></div>
-<div><dt>ტრანსკრიფციისა და გამოყენების ჩანაწერები, მრიცხველები, გამოწერის შესახებ მიღებული შეტყობინებები</dt><dd>ავტომატურად იშლება ჩაწერიდან ან ბოლო განახლებიდან 13 თვის შემდეგ (ყოველდღიური პროცესით)</dd></div>
+<div><dt>ტრანსკრიფციის, თარგმნისა და გამოყენების ჩანაწერები, მრიცხველები, გამოწერის შესახებ მიღებული შეტყობინებები</dt><dd>ავტომატურად იშლება ჩაწერიდან ან ბოლო განახლებიდან 13 თვის შემდეგ (ყოველდღიური პროცესით)</dd></div>
 <div><dt>ინსტალაციის ჩანაწერი (ინსტალაციის იდენტიფიკატორი, ტოკენის ანაბეჭდი, მომხმარებლის იდენტიფიკატორი)</dt><dd>სანამ ღილაკს <strong>„ჩემი მონაცემების წაშლა“</strong> არ დააჭერთ. ავტომატურად არ იშლება</dd></div>
 <div><dt>გამოწერის სტატუსი RevenueCat-იდან</dt><dd>სანამ მის წაშლას არ მოგვთხოვთ (იხ. <a href="#ka-8">მე-8 ნაწილი</a>). ავტომატურად არ იშლება, გამოწერის დასრულების შემდეგაც კი</dd></div>
 <div><dt>სერვერის ჟურნალები</dt><dd>7 დღემდე, Cloudflare-ზე</dd></div>
@@ -398,8 +449,9 @@ footer a { color: var(--text); }
 <h2 id="ka-8-h"><span class="num">8.</span>თქვენი არჩევანი და უფლებები</h2>
 <ul>
 <li><strong>აუდიოს გაგზავნაზე თანხმობის გაუქმება:</strong> TITR-ში გახსენით „პარამეტრები › კონფიდენციალურობა“ და დააჭირეთ ღილაკს „აუდიოს გაგზავნაზე თანხმობის გაუქმება“. სანამ ისევ არ დაეთანხმებით, აღარაფერი გაიგზავნება: TITR შემდეგ ატვირთვამდე თანხმობას ისევ მოგთხოვთ. ეს უკვე დამუშავებულ აუდიოზე არ მოქმედებს.</li>
+<li><strong>ტიტრების თარგმნაზე თანხმობის გაუქმება:</strong> TITR-ში გახსენით „პარამეტრები › კონფიდენციალურობა“ და დააჭირეთ ღილაკს „ტიტრების თარგმნაზე თანხმობის გაუქმება“. სანამ ისევ არ დაეთანხმებით, აღარაფერი გაიგზავნება. უკვე შექმნილი თარგმანები თქვენს iPhone-ზე რჩება.</li>
 <li><strong>„ჩემი სიტყვები“:</strong> სიტყვების დამატება და წაშლა შეგიძლიათ ტიტრების შექმნის ეკრანზე ან TITR-ის პარამეტრებში: „ენა › ჩემი სიტყვები“. ისინი მხოლოდ თქვენს iPhone-ზე ინახება, TITR-ის სერვერი კი მათ არასდროს ინახავს.</li>
-<li><strong>ჩემი მონაცემების წაშლა:</strong> TITR-ში, „პარამეტრები › კონფიდენციალურობაში“, ღილაკი „ჩემი მონაცემების წაშლა“ TITR-ის სერვერიდან მაშინვე შლის ინსტალაციის ჩანაწერს, მის ტრანსკრიფციისა და გამოყენების ჩანაწერებს, უფასო წუთების მრიცხველსა და ხარჯის მრიცხველს. ის არ შლის:
+<li><strong>ჩემი მონაცემების წაშლა:</strong> TITR-ში, „პარამეტრები › კონფიდენციალურობაში“, ღილაკი „ჩემი მონაცემების წაშლა“ TITR-ის სერვერიდან მაშინვე შლის ინსტალაციის ჩანაწერს, მის ტრანსკრიფციის, თარგმნისა და გამოყენების ჩანაწერებს, უფასო წუთების მრიცხველსა და ხარჯის მრიცხველს. ის არ შლის:
 <ul><li>გამოწერის სტატუსსა და გამოწერით დახარჯულ წუთებს, რათა წაშლამ გადახდილი თვის წუთები თავიდან არ შეავსოს. დახარჯული წუთების ჩანაწერი ბოლო განახლებიდან 13 თვის შემდეგ იშლება, გამოწერის სტატუსი კი ინახება, სანამ მის წაშლას არ მოგვთხოვთ;</li><li>ამ iPhone-ზე ამ თვეში უკვე დახარჯულ უფასო წუთებს (DeviceCheck);</li><li>არაფერს თქვენს iPhone-ზე: თქვენი პროექტები რჩება, სანამ თავად არ წაშლით.</li></ul>
 </li>
 <li><strong>წვდომა, შესწორება, წაშლა, დამუშავების შეწყვეტა, მონაცემების ასლი:</strong> მოგვწერეთ მისამართზე <a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>. TITR-ში ანგარიშები არ არის, ამიტომ გამოწერის ჩანაწერების მოსაძებნად შეიძლება გთხოვოთ შეკვეთის ნომერი (order ID) Apple-ის შესყიდვის ქვითრიდან, რომელიც ელფოსტით მიიღეთ.</li>
@@ -408,15 +460,15 @@ footer a { color: var(--text); }
 </section>
 <section id="ka-9" aria-labelledby="ka-9-h">
 <h2 id="ka-9-h"><span class="num">9.</span>ბავშვები</h2>
-<p>TITR ბავშვებისთვის არ არის შექმნილი და შეგნებულად არ აგროვებს მათ მონაცემებს. თუ 16 წლამდე ასაკის ხართ, აუდიოს გაგზავნაზე დათანხმებამდე ჰკითხეთ მშობელს ან მეურვეს. თუ ფიქრობთ, რომ ბავშვმა TITR მშობლის ან მეურვის თანხმობის გარეშე გამოიყენა, TITR-ის სერვერზე არსებული ჩანაწერები შეგიძლიათ მაშინვე წაშალოთ TITR-ში: „პარამეტრები“ › „კონფიდენციალურობა“ › „ჩემი მონაცემების წაშლა“. ასევე შეგიძლიათ მოგვწეროთ მისამართზე <a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>.</p>
+<p>TITR ბავშვებისთვის არ არის შექმნილი და შეგნებულად არ აგროვებს მათ მონაცემებს. თუ 16 წლამდე ასაკის ხართ, აუდიოს ან ტიტრების ტექსტის გაგზავნაზე დათანხმებამდე ჰკითხეთ მშობელს ან მეურვეს. თუ ფიქრობთ, რომ ბავშვმა TITR მშობლის ან მეურვის თანხმობის გარეშე გამოიყენა, TITR-ის სერვერზე არსებული ჩანაწერები შეგიძლიათ მაშინვე წაშალოთ TITR-ში: „პარამეტრები“ › „კონფიდენციალურობა“ › „ჩემი მონაცემების წაშლა“. ასევე შეგიძლიათ მოგვწეროთ მისამართზე <a href="mailto:ratiliklikadze@gmail.com">ratiliklikadze@gmail.com</a>.</p>
 </section>
 <section id="ka-10" aria-labelledby="ka-10-h">
 <h2 id="ka-10-h"><span class="num">10.</span>უსაფრთხოება</h2>
-<p>აპსა და TITR-ის სერვერს შორის ყველა კავშირი დაშიფრულია (HTTPS). სერვერი სესიის ტოკენებს მხოლოდ ანაბეჭდის სახით ინახავს, ElevenLabs-ისა და სხვა სერვისების გასაღებები კი მხოლოდ სერვერზეა და აპში არასდროს ხვდება. თქვენს iPhone-ზე ტოკენი და მომხმარებლის იდენტიფიკატორი Keychain-ში ინახება.</p>
+<p>აპსა და TITR-ის სერვერს შორის ყველა კავშირი დაშიფრულია (HTTPS). სერვერი სესიის ტოკენებს მხოლოდ ანაბეჭდის სახით ინახავს, ElevenLabs-ის, OpenRouter-ისა და სხვა სერვისების გასაღებები კი მხოლოდ სერვერზეა და აპში არასდროს ხვდება. თქვენს iPhone-ზე ტოკენი და მომხმარებლის იდენტიფიკატორი Keychain-ში ინახება.</p>
 </section>
 <section id="ka-11" aria-labelledby="ka-11-h">
 <h2 id="ka-11-h"><span class="num">11.</span>ცვლილებები ამ პოლიტიკაში</h2>
-<p>როცა მონაცემების დამუშავების წესი იცვლება, ამ გვერდსა და მის თარიღს ვანახლებთ. თუ ცვლილება ეხება იმას, რა გადის თქვენი iPhone-იდან, TITR ამას აპში გაცნობებთ და აუდიოს გაგზავნამდე თანხმობას ისევ მოგთხოვთ.</p>
+<p>როცა მონაცემების დამუშავების წესი იცვლება, ამ გვერდსა და მის თარიღს ვანახლებთ. თუ ცვლილება ეხება იმას, რა გადის თქვენი iPhone-იდან, TITR ამას აპში გაცნობებთ და აუდიოს ან ტექსტის გაგზავნამდე თანხმობას ისევ მოგთხოვთ.</p>
 </section>
 <section id="ka-12" aria-labelledby="ka-12-h">
 <h2 id="ka-12-h"><span class="num">12.</span>კონტაქტი</h2>
